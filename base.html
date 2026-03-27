@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { margin:0; font-family: Arial; background:#f0f0f0; display:flex; }
+        .sidebar { width:220px; background:#fff; padding:20px; height:100vh; border-right:1px solid #ccc; }
+        .sidebar h2 { text-align:center; margin-bottom:20px; font-size:20px; }
+        .sidebar a { display:block; padding:12px; margin-bottom:5px; color:#333; text-decoration:none; border-radius:5px; font-weight:bold;}
+        .sidebar a:hover { background:#ddd; }
+        .main { flex:1; padding:20px; }
+        .cards { display:flex; gap:15px; flex-wrap:wrap; margin-bottom:20px; }
+        .card { flex:1; min-width:150px; padding:25px; border-radius:10px; color:#fff; text-align:center; font-weight:bold; font-size:18px; box-shadow:0 2px 5px rgba(0,0,0,0.2); }
+        .students { background:#ff9999; color:#000; }
+        .teachers { background:#99ccff; color:#000; }
+        .subjects { background:#ffcc66; color:#000; }
+        .departments { background:#99ff99; color:#000; }
+        .management { background:#ff99ff; color:#000; }
+        .revenue { background:#66ccff; color:#000; }
+        .holidays { background:#ffccff; color:#000; }
+        .exams { background:#ff9966; color:#000; }
+        table { border-collapse: collapse; width: 100%; background: #fff; border-radius: 10px; overflow: hidden; }
+        th, td { border:1px solid #ccc; padding:10px; text-align:center; }
+        th { background:#eee; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>🎓 Admin Panel</h2>
+        <a href="{% url 'dashboard' %}">Dashboard</a>
+        <a href="{% url 'student_list' %}">Students</a>
+        <a href="{% url 'teacher_list' %}">Teachers</a>
+        <a href="{% url 'subject_list' %}">Subjects</a>
+        <a href="{% url 'department_list' %}">Departments</a>
+        <a href="#">Management</a>
+        <a href="{% url 'revenue' %}">Revenue</a>
+        <a href="{% url 'holiday_list' %}">Holidays</a>
+        <a href="{% url 'exam_list' %}">Exams</a>
+    </div>
+    <div class="main">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

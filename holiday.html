@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Holidays</h2>
+<table class="table table-bordered">
+<tr><th>Name</th><th>Date</th></tr>
+{% for h in holidays %}
+<tr>
+    <td>{{ h.name }}</td>
+    <td>{{ h.date }}</td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background: #f9f9f9;
+}
+
+.sidebar {
+    width: 220px;
+    background: #fff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.sidebar ul li:hover {
+    background: #f0f0f0;
+}
+
+.sidebar ul li i {
+    margin-right: 10px;
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    position: relative;
+}
+
+.profile button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.profile .dropdown {
+    display: none;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.profile:hover .dropdown {
+    display: block;
+}
+
+.searchbar {
+    margin: 20px 0;
+}
+
+.searchbar input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.lightpink { background: #ffb6c1; color: #000; }
+.lightblue { background: #add8e6; color: #000; }
+.linkred { background: #ff4d4d; }
+.lightgrey { background: #d3d3d3; color: #000; }
+
+.management {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.mg-card {
+    flex: 1;
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.graphs {
+    display: flex;
+    gap: 30px;
+}
+.graphs canvas {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}

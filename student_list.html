@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="main">
+    <h2>Students</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Roll</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Age</th>
+                <th>Fees Submitted</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for s in students %}
+            <tr>
+                <td>{{ s.roll_number }}</td>
+                <td>{{ s.name }}</td>
+                <td>{{ s.department }}</td>
+                <td>{{ s.age }}</td>
+                <td>{{ s.fees_submitted|yesno:"Yes,No" }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

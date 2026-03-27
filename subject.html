@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subjects</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<div class="main">
+    <h2>Subjects</h2>
+    <ul>
+    {% for s in subjects %}
+        <li>{{ s.name }}</li>
+    {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Departments</title>
+</head>
+<body>
+
+<h2>Departments</h2>
+
+{% for d in departments %}
+<p>{{ d.course }}</p>
+{% empty %}
+<p>No departments</p>
+{% endfor %}
+
+</body>
+</html>
